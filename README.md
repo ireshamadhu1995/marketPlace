@@ -51,6 +51,19 @@ You can now access the server at http://localhost:8000
 
 Get API document https://documenter.getpostman.com/view/7774988/UzQyr4GY
 
+
+## Own ideas and suggestions
+
+a) Sellers must register to the system before login.
+
+b) Sellers must login to the system before insert, update, delete and view product details.
+
+c) When deleting and updating a product, sellers can delete, update own products only.
+
+d) Customers don't need to register or login to the system to view  products and the sellers details.
+
+e) To limit the access from the same IP address to the endpoints, used throttle as 10 times per a minute from a particular IP.
+
     
 ## About Laravel
 
