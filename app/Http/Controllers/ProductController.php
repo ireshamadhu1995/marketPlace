@@ -67,7 +67,7 @@ class ProductController extends Controller
     
                 $product = new Product();
                 $product->name = $request->input('name');
-                $product->price = $request->input('price');
+                $product->price = number_format((float)$request->input('price'), 2, '.', '');
                 $product->stock = $request->input('stock');
                 $product->img_path = public_path('public/Image').$filename;
                 $product->description = $request->input('description');
@@ -150,7 +150,7 @@ class ProductController extends Controller
                 }
                 $product = Product::find($id);
                 $product->name = $request->input('name');
-                $product->price = $request->input('price');
+                $product->price = number_format((float)$request->input('price'), 2, '.', '');
                 $product->stock = $request->input('stock');
                 $product->img_path = $img_path;
                 $product->description = $request->input('description');

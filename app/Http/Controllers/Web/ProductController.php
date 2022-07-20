@@ -68,4 +68,22 @@ class ProductController extends Controller
         return APIHelper::makeAPIResponse(true, "All Sellers List", $sellers, 200);
 
     }
+
+    public function searchProductByName(Request $request)
+    {
+        $products = Product::query()
+        ->where('name', 'LIKE', "%{$request->name}%")->with('sellers')
+        ->get();
+        return APIHelper::makeAPIResponse(true, "Searched Products", $products, 200);
+
+    }
+
+    public function getSameProductsOfMultipleSellers(Request $request)
+    {
+        $products = Product::query()
+        ->where('name', 'LIKE', "{$request->name}")->with('sellers')
+        ->get();
+        return APIHelper::makeAPIResponse(true, "Searched Products", $products, 200);
+
+    }
 }

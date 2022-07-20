@@ -58,11 +58,18 @@ a) Sellers must register to the system before login.
 
 b) Sellers must login to the system before insert, update, delete and view product details.
 
+c) One product is belongs to one seller. 
+
 c) When deleting and updating a product, sellers can delete, update own products only.
 
 d) Customers don't need to register or login to the system to view  products and the sellers details.
 
 e) To limit the access from the same IP address to the endpoints, used throttle as 10 times per a minute from a particular IP.
+
+f) Same products which are added by multiple sellers can be retrieved via product name. 
+
+g) Products can be searhed by product name.
+
 
     
 ## About Laravel

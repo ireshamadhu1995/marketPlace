@@ -21,6 +21,8 @@ use App\Http\Controllers\Web\ProductController;
 
 Route::get('products', [ProductController::class, 'getAllProducts'])->name('products');
 Route::get('sellers', [ProductController::class, 'getAllSellers'])->name('sellers');
+Route::get('product/search', [ProductController::class, 'searchProductByName'])->name('products.search');
+Route::get('same/product/search', [ProductController::class, 'getSameProductsOfMultipleSellers'])->name('same.products.search');
 Route::get('product/detail/{product_id}', [ProductController::class, 'getDetailsOfAProduct'])->name('product.detail');
 Route::get('product/lists/{seller_id}', [ProductController::class, 'getProductListBySeller'])->name('product.list');
 Route::get('seller/details/{product_id}', [ProductController::class, 'getSellerDetailOfAProduct'])->name('seller.detail');
